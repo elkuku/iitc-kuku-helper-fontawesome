@@ -1,0 +1,10 @@
+{
+  "name": "IITC plugin: KuKu-Helper-Fontawesome",
+  "id": "iitc_plugin_KuKuHelperFontawesome",
+  "category": "Misc",
+  "description": "Add fontawesome",
+  "author": "elkuku",
+  "entry": "src/Main.ts",
+  "minimize": false,
+  "changelog": ""
+}
