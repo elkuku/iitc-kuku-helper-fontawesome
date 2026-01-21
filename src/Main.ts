@@ -1,21 +1,21 @@
-import * as Plugin from "iitcpluginkit";
+import * as Plugin from 'iitcpluginkit'
 
-
-class KuKuHelperFontawesome implements Plugin.Class {
+class Main implements Plugin.Class {
 
     init() {
-        console.log("KuKuHelperFontawesome " + VERSION);
+        console.log('KuKuHelperFontawesome ' + VERSION)
 
-        
-
-        // FILL ME
+        window.addHook('iitcLoaded', this.onIitcLoaded)
     }
 
+    private onIitcLoaded = () => {
+        const script = document.createElement('script')
+
+        script.src = 'https://kit.fontawesome.com/f02f77014d.js'
+        script.crossOrigin = 'anonymous'
+
+        document.head.appendChild(script)
+    }
 }
 
-/**
- * use "main" to access you main class from everywhere
- * (same as window.plugin.KuKuHelperFontawesome)
- */
-export const main = new KuKuHelperFontawesome();
-Plugin.Register(main, "KuKuHelperFontawesome");
+Plugin.Register(new Main, 'KuKuHelperFontawesome')
